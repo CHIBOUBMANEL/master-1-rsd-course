@@ -1,0 +1,16 @@
+title: MASTER 1 RSD
+description: MASTER 1 RSD
+template:
+  repo: master-1-rsd-template
+  name: master-1-rsd
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
